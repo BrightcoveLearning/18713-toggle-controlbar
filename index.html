@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Untitled Document</title>
   <style media="screen">
+    /* First two declarations control the transforms of the controlbar */
     .myClass.not-hover.vjs-has-started.vjs-paused.vjs-user-active .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
     .myClass.not-hover.vjs-has-started.vjs-paused.vjs-user-inactive .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
     .myClass.not-hover.vjs-has-started.vjs-playing.vjs-user-active .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
@@ -22,6 +23,16 @@
     .myClass.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-progress-control {
         height: .5em;
         top: -.5em;
+    }
+
+    /* Following two declarations disable controlbar rise and lower on mouseEnter and mouseLeave events */
+    .video-js:not(.myClass):not(.not-hover) .vjs-control-bar {
+      transform: translateY(3em);
+    }
+
+    .video-js:not(.myClass):not(.not-hover) .vjs-progress-control {
+        height: .3em;
+        top: -.3em;
     }
   </style>
 </head>
